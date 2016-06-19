@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<title>NEologd</title>
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="common/js/jquery.chat.js"></script>
+<link href="common/css/style.css" rel="stylesheet" type="text/css">
+<link href="common/css/line_style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="loader"><img src="common/images/loader.gif" /></div><div id="fade"></div>
+<div id="container">
+  <div id="logo" class="pc">
+    <div id="lg_left">CHAT ROOM 1</div>
+    <div id="lg_right">
+          <a href="#" id="system"><img src="common/images/sys.png" /></a>
+          <a href="#" id="logof"><img src="common/images/logof.png" /></a>
+    </div>
+  </div>
+  <div id="header" class="pc">
+    <a href="#" id="map"><img src="common/images/map.png" /></a>
+    <a href="#" id="stump"><img src="common/images/stump.png" /></a>
+    <a href="#" id="custom"><img src="common/images/color.png" /></a>
+    <a href="#" id="setup"><img src="common/images/sys.png" /></a>
+  </div>
+  
+  <div id="log" data-lasthash="" data-slide="on">
+    <ul></ul>
+  </div>
+</div>
+  
+<script type="text/javascript">
+   $(function(){
+      $('#container').jqueryChat({
+        'room_id'    : '001', //部屋ID
+        'reload'     : 10000,         //更新秒数 default:10000(10秒)
+        'readlog'    : true,          //HTMLを更新(初見も)時にログを見せるかどうか
+        'delcookie'  : false,         //HTMLを更新時にcookieに記録している名前を消すかどうか
+        'bt_name'    : '名前を書いて入室', //入室ボタンの名前
+        'bt_chat'    : 'メッセージを送信',  //書き込みボタンの名前
+        'mes_logout' : '退室しますか?', //退室アラートのメッセージ
+        'err_name'   : 'お名前を書いてください',      //名前未記入時のエラーメッセージ
+        'err_upload' : 'アップロード失敗したみたい(´・ω・`)', //ファイルアップロードに失敗したときのメッセージ
+        'err_write'  : '何かお書きください',  //チャット未記入時のエラーメッセージ
+        'err_wnig'   : 'エラーが発生しました',     //よく判らないときのメッセージ
+        'log_login'  : false,           //ログイン時に管理人メッセージを記録するかどうか
+        'login'      : 'さんが入室しました',  //↑有効のとき、名前の後に付くメッセージ
+        'log_logof'  : false,           //ログアウト時に管理人メッセージを記録するかどうか
+        'logout'     : 'さんが帰ったみたい(´・ω・`)',//↑有効のとき、名前の後に付くメッセージ
+        'flaggmap'   : true, //現在地取得機能を使うかどうか
+        'gmap'       : '送信すると貴方の位置情報が相手に知られます。宜しいですか？', //↑その注意文
+        'color'      : 'FF0004,0A00FF,FF00D6,2B9700,FF7600,666666' //カラーパレットの色 *#は付けない
+      });
+   });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+/* CSS Document */
+
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+a#button {
+  width: 100% !important;
+}
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 14px;
+	line-height: 1.6em;
+	background-color: #7897C5;
+}
+
+#loader {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    _position: absolute; /* IE6対策 */
+    top: 50%;
+    left: 50%;
+    margin-top: -16px; /* heightの半分のマイナス値 */
+    margin-left: -16px; /* widthの半分のマイナス値 */
+    z-index: 100;
+}
+ 
+#fade {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 50;
+}
+
+#container{
+	width: 100%;
+
+	position: relative;
+	display: none;
+	background-repeat: no-repeat;
+	background-position: left 0px bottom 20px;
+	
+}
+@media screen and (min-width:320px) and (max-width: 519px){
+  #container{
+    width: auto;
+  }
+}
+
+input {
+  font-size: 100%;
+}
+
+ul{
+  margin: 0px;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+  clear: both;
+  margin-bottom: 10px;
+  width:100%;
+  word-break: break-all;
+}
+#logo{
+  display: none;
+  position: fixed !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #000000;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.70;
+  opacity: 0.70;
+  color: #FFFFFF;
+}
+#logo #lg_left{
+  float: left;
+  padding-left: 5px;
+}
+#logo #lg_right{
+  float: right;
+  text-align: right;
+  width: 60px;
+}
+#logo img{
+  max-width: 24px;
+  height: auto;
+  margin-right: 3px;
+  margin-top: 3px;
+}
+#header {
+  position: fixed !important;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #000000;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.70;
+  opacity: 0.70;
+  text-align: right;
+  color: #FFFFFF;
+  display: none;
+}
+#header img{
+  width:25px;
+  height:auto;
+  margin-right:10px;
+  vertical-align:middle;
+}
+
+#chat{
+  position: fixed !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0px;
+  height: 80px;
+}
+
+#message{
+  position: fixed !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 80px;
+  height: 30px;
+  background-color: #FF0004;
+  line-height: 30px;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60;
+  color: #FFFFFF;
+  text-align: center;
+  display:none;
+}
+
+#log{
+  padding-bottom: 80px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 50px;
+}
+.log{
+  background-color: #FFFFFF;
+  padding: 10px;
+  ;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  max-width:60%;
+}
+.log span{
+  display: block;
+  font-size: 90%;
+  color: #93A9FC;
+}
+.li1{
+  float:left;
+}
+.li2{
+  float:right
+}
+
+.li1 .name{
+  float:left;
+}
+.li1 .log{
+  float:left;
+  margin-left:10px;
+}
+.li2 .name{
+  float:right;
+}
+.li2 .log{
+  float:right;
+  margin-right:10px;
+}
+
+.li3{
+  display: none;
+	text-align: center;
+	font-size: 90%;
+	border: 3px dotted #FFFFFF;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.li4{
+	font-size: 90%;
+	background-color: #FFFFFF;
+	color: #ff0000;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+  padding: 8px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.li5 .name{
+  float:left;
+}
+.li5 .log{
+  float:left;
+  background: none;
+}
+.li6 .name{
+  float:right;
+}
+.li6 .log{
+  float:right;
+  background: none;
+}
+
+.li4 .log{
+  float:right;
+  margin-right:10px;
+  background: none;
+}
+
+#camera{
+  position: fixed !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 80px;
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.60;
+  opacity: 0.60;
+  display: none;
+}
+#camera input{
+  padding: 3px;
+}
+
+#form{
+  height: 80px;
+  overflow: hidden;
+  background-color: #777;
+}
+
+#camera_icon{
+  display: none;
+  float: right;
+  text-align: left;
+  width: 44px;
+}
+#theme_icon{
+  float: right;
+  text-align: left;
+  width: 44px;
+}
+
+#form #var{
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px none #dddddd;
+  border-right: 1px none #dddddd;
+  border-left: 1px none #dddddd;
+}
+
+#form a{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  color: #FFFFFF;
+  text-decoration: none;
+  float: left;
+}
+
+#sys_setting{
+  position: fixed !important;
+  position: absolute;
+  top: 67px;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+  color: #FFFFFF;
+  line-height: 1em;
+  font-size: 90%;
+  display: none;
+}
+#sys_setting select{
+  padding: 3px;
+  font-size: 120%;
+}
+
+#sys_setting #sys_row {
+  overflow: hidden;
+  height: 35px;
+  line-height: 35px;
+}
+#sys_setting #sys_th {
+  float: left;
+  padding-left: 5px;
+  width: 55%;
+}
+#sys_setting #sys_td {
+  float:right;
+  padding-right: 5px;
+  width: 35%;
+  text-align: right;
+}
+#setting{
+  position: fixed !important;
+  position: absolute;
+  top: 67px;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+  color: #FFFFFF;
+  padding:10px;
+  display:none;
+}
+
+#setting div{
+  overflow:hidden;
+  padding:5px;
+}
+
+#setting  p{
+  float:left;
+  width:80px;
+}
+#setting span{
+  font-size:150%;
+  margin-right:15px;
+  cursor:pointer;
+}
+
+#stump_wrap{
+  position: fixed !important;
+  position: absolute;
+  top: 67px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+  color: #FFFFFF;
+  overflow-y:scroll;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display:none;
+}
+#stump_wrap img{
+  padding: 5px;
+}
